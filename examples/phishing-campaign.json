@@ -1,0 +1,26 @@
+{
+  "info": "LAB - Phishing campaign against finance users",
+  "date": "2026-10-02",
+  "threat_level": "high",
+  "analysis": "completed",
+  "distribution": "organisation",
+  "tags": ["tlp:amber", "misp-galaxy:mitre-attack-pattern=\"Phishing - T1566\""],
+  "indicators": [
+    {"value": "203.0.113.25", "type": "ip-src",
+     "comment": "sent the phishing emails, later used for remote access",
+     "first_seen": "2026-09-28T09:15:00Z", "last_seen": "2026-10-01T17:40:00Z"},
+    {"value": "198.51.100.42", "type": "ip-dst",
+     "comment": "contacted by the compromised host"},
+    {"value": "secure-login-example[.]test", "type": "domain",
+     "comment": "fake login page used to harvest credentials"},
+    {"value": "update-service-example[.]test", "type": "domain",
+     "comment": "fake update service"},
+    {"value": "hxxps://secure-login-example[.]test/owa/auth", "type": "url",
+     "comment": "credential harvesting page"},
+    {"value": "invoice_Q3.pdf.lnk", "type": "filename",
+     "comment": "attachment name"},
+    {"value": "LAB-Phishing-Campaign", "type": "campaign-name", "to_ids": false},
+    {"value": "Phishing email delivered to finance users. Credentials were harvested through a fake login page and the account was later used for remote access.",
+     "type": "text", "category": "Internal reference", "to_ids": false}
+  ]
+}

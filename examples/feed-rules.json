@@ -1,0 +1,6 @@
+{
+  "Tor ALL nodes": {"expect": ["ip-dst"], "min": 1000},
+  "Malware Bazaar": {"expect": ["md5"], "min": 100},
+  "OpenPhish url list": {"expect": ["url"], "min": 50},
+  "ip-block-list - snort.org": {"expect": ["ip-dst"], "min": 100}
+}
