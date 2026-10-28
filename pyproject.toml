@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mispkit"
+version = "0.1.0"
+description = "Small helpers for a self-hosted MISP: IOC linting, event import and feed health checks"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Gursimran Singh"}]
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+mispkit = "mispkit.cli:main"
+
+[tool.setuptools]
+packages = ["mispkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
